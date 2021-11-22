@@ -1,0 +1,13 @@
+- Each item is called a node or vertex
+- Lines connecting is called Edge
+
+Types of graphs
+    - DIRECTED
+    - UNDIRECTED
+    - weighted (edges have values )
+
+CATEGORIES
+    - CYCLIC
+    - ACYCLIC (CANNOT GO BACK)
+
+    DAG

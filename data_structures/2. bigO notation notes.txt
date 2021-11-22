@@ -1,0 +1,55 @@
+Big O asyontic analysis
+How well the problem is solved.
+
+key contributors to quality code
+    - Readable
+    - Scalable
+    - efficient
+
+Big o Complexity Chart
+x = elements
+y = operations
+
+
+O(n) -> Linear time -> X operations for n 
+
+O(1) -> Constant Time -> 1 operation for n
+     -> Always rounded down to eg O(3) -> O(1)
+
+O(n^2) -> Quadratic time
+
+---------------RULES OF BIG O ----------------------------
+
+Rule 1 - Worst case is what we need to care for.
+
+Rule 2 - Ignore constants 
+       - Eg: O(1 + n/2 + 100)  is still O(n)
+             O(2n)             is still O(n) 
+    
+Rule 3 - Different term for input
+    printBoxes(box1, box2)
+    // 2 separete loops different array input
+    // O(a+b)
+
+Rule 4 -Drop Non Dominants
+    - O(n + n^2) = O( n^2)
+
+
+3 pillars of Code
+Readable
+speed - time Complexity
+memory - space complexity
+
+
+Causes for space complexity  
+    - Variables
+    - Data Structure
+    - Function call
+    - allocations
+
+Space complexity dont care about input, only whats inside the Function
+https://www.bigocheatsheet.com/
+
+
+
+

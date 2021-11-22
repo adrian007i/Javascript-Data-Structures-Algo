@@ -1,0 +1,78 @@
+1) Write down key points
+    - 2 Arrays
+    - check if array has common items
+    - return boolean
+
+
+2) Verify input/outputs
+    - input : 2 Arrays - ask if it will always have arrays as input
+    - output: boolean
+
+3) Value of the problem. space/time complexity.
+    - ask the max size of array?  If its going to be small, then we dont need to worry about big of.
+    - ask which is more efficient between time/space complexity.
+
+4) Dont ask interviewer a million questions.
+
+
+5) Start with brute force approach
+    - loop both arrays and compare each element from the first array to the second array
+    - this is O(a * b) quadratic time
+
+6) Tell them why this approach is not the best.
+    - Slow
+
+7) What can we do better?
+    - can use a hashmap
+
+8/9) Write down steps before Coding
+    - Convert first array to hashmap by looping first array to store in object
+    - loop second array and check if item === firstArrayObject.property
+    - add comments if needed
+
+10) Code  the previous step
+
+function compareCommon(arr1, arr2){
+    let map={};
+
+    for(let i =0; i < arr1.length; i++){
+        if(!map[arr1[i]]){
+            map[arr1[i]] = true;
+        }
+    }
+
+    for(let i =0; i < arr2.length; i++){
+        if(arr2[i] === map[arr2[i]]){
+            return true;
+        }
+    }
+    return false;
+}
+
+
+11) Think of ways ot break the Code. false input etc
+    - number
+    - null empty array etc
+    - no second array
+    - empty array
+    - paramaters questions
+
+12) Use more meaning full variable names
+
+13) test Code  
+    - no params, 0s, negatives, undefined, massive array
+
+14) Ask interviewer about improvements in the code.
+    - does it work?
+    - readable
+    - fast enough?
+    - what is the most interesting solution youve seen to this problem
+
+15)
+If your interviewer is happy with the solution, the interview usually ends here. It is also
+common that the interviewer asks you extension questions, such as how you would handle the
+problem if the whole input is too large to fit into memory, or if the input arrives as a stream.
+This is a common follow-up question at Google, where they care a lot about scale. The answer
+is usually a divide-and-conquer approach — perform distributed processing of the data and only
+read certain chunks of the input from disk into memory, write the output back to disk and
+combine them later.

@@ -1,0 +1,20 @@
+Javascript V8 engine
+
+Memory heap
+    - defining variables fills up the memory heap
+    - Memory leaks occure when a variable is there but not being used
+    - avoid global functions
+
+
+
+Call stack
+    - reads and execute the script
+    - pops from call stack after execution
+    - js single threaded
+    - js one call stack
+
+
+Javascript run-time environment
+    - Javascript (memory heap and call stack)
+    - Web APIs (Dom, Ajax, Timeout) - placed from call stack into web APIs
+    - callbacks queue checks to see if the call stack is empty to execute 
