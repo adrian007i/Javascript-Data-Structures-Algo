@@ -1,0 +1,89 @@
+        1
+      /  \
+    2       3
+   /  \       \
+4       5       6
+
+root - first node
+parent - node that contains children
+children - has a parent node
+leaf - node with no children
+sibling - node with the same parent
+
+different tree types:
+    - binary tree
+        - 2 children
+
+        - perfect bt
+            - all node has 2 children
+        - full bt
+            - all node has 2 children or no children
+
+        lookup O(log N)
+        insert O(log N)
+        delete O(log N)
+
+O(log N)
+
+
+perfectly balanced tree
+level 0 : 2^0 = 1
+level 1 : 2^1 = 2
+level 2 : 2^2 = 4
+level 3 : 2^3 = 8
+
+# of nodes = (2  ^ height) -1
+            2^3-1
+
+log nodes = steps
+log 100 = 2 ^ 10
+
+
+binary search trees
+    - have relationship between nodes  
+    - bi 2 nodes
+    - can become very unbalanced 
+    - unbalance O(N)
+    - balanace O(log N)
+    - AVL & Black and red trees 
+        - Methods used to balance a binary search tree
+
+
+heaps:
+    - min and max heaps
+    - type of tree
+    - nodes are order in height
+    - lookup is 0 (n)
+    - good to find values < 49 
+    - allows you to find the max/min element very fast
+
+
+        100
+       /   \
+    50      49
+    /\      /\
+  10  20   30 40
+
+
+
+  priority queue:
+    - a tree structure 
+    - allows nodes of higher priority to be stored to the top 
+    
+
+Trie
+    - tree used for searching text
+    - can be fastest
+    - can let you know if a word or part of node exist in a piece of text
+    - searcing words in dictionary/ auto predicting
+    - big o (length of word)
+    - start node is null
+
+                 start
+            /    /   \     \
+          /     /       \     \
+         a      b       c      d
+        /\      /\
+       N  T    a  A
+       D       T  R
+                  K

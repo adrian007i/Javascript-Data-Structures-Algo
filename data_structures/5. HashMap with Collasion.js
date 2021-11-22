@@ -1,18 +1,9 @@
-// with limited memory
-// a collasion between 2 pieces of data can occur
+// Since memory is limited memory a collasion between 2 pieces of data can occur 
 // this means the 2 pieces of data will be stored in the same memory address block
-// slows down read o(n)
+// this process slows down hashmaps
+ 
 
-let user = {
-    name: "adrian",
-    age: 12
-}
-
-const a = new Map ();
-const b= new Set();
-
-// building a hash table
-
+// building a hash table 
 class HashTable {
     constructor(size){
         this.data  =  new Array (size);
@@ -63,5 +54,4 @@ const myhashtable =new HashTable(50);
 myhashtable.set("name", "adrian");
 myhashtable.set("age", 24);
 myhashtable.set("name", "adrian john");
-console.log(myhashtable.get("test")) 
-// myhashtable.get("name")
+console.log(myhashtable.get("test"))  
