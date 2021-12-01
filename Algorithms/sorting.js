@@ -88,7 +88,6 @@ function merge_sort(array) {
 }
 
 function merge(left, right) {
-    console.log(left+'------------'+right);
     let merged = [];
     while (left.length+right.length != 0) { 
         if (left.length == 0) { 
@@ -112,5 +111,34 @@ function merge(left, right) {
 
 }
 // console.log(merge_sort([4,3,2,1]));
+  
+function quickSort(array){
 
+    // nothing to pivot
+    if(array.length <= 1 )
+        return array;
+     
+    const pivot_result = pivot(array); 
 
+           //left                                      //pivot point                           //right 
+    return quickSort(array.slice(0, pivot_result[1])).concat([array[pivot_result[1]]]).concat(quickSort(array.slice(pivot_result[1] + 1)));  
+}
+
+function pivot(arr){ 
+    let pivot = arr.length-1;
+
+    for (let i = 0; i < pivot; i++) { 
+
+        if(arr[pivot] < arr[i]){
+            const pivot_val = arr[pivot];
+            arr[pivot] = arr[i];
+            arr[i] =arr[pivot -1];
+            arr[pivot -1 ]=pivot_val;
+            i=-1;
+            pivot--;
+        } 
+    }
+    return [arr,pivot];
+}
+ 
+// console.log(quickSort([99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]));
