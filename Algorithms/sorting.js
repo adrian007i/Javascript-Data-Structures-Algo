@@ -142,3 +142,19 @@ function pivot(arr){
 }
  
 // console.log(quickSort([99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]));
+
+
+// when to use a sort
+
+// insertion sort:
+// 	- small input or input is mostly sorted (little space and easy to impleent)
+
+
+// merge sort:
+// 	- if we are worried about worst case, use merge sort O(m log(n))
+// 	- more memory
+
+// quickk sort
+// 	- fastest
+// 	- decent on menory
+// 	- one down size is worst case
