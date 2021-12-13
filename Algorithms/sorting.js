@@ -1,5 +1,5 @@
 // THE SORTING ALGOS
-//  BUBBLE SORT (ELEMENTY SORTING BASIC) O(N)
+//  BUBBLE SORT (ELEMENTY SORTING BASIC)  O(N^2)
 //  WE BUBBLE UP THE HIGHEST NUMBER
 
 function bubble_sort(arr) {
@@ -22,7 +22,7 @@ function bubble_sort(arr) {
 }
 // console.log( bubble_sort([,100, 5,1,3,2,1 ,100]));
 
-// SELECTION SORT (ELEMENTY SORTING BASIC) O(N)
+// SELECTION SORT (ELEMENTY SORTING BASIC)  O(N^2)
 // FIND SMALLEST ITEM - SWAP SMALLEST WITH FIRST
 
 function selection_sort(arr) {
@@ -44,7 +44,7 @@ function selection_sort(arr) {
 }
 // console.log( selection_sort([100, 5,1,3,2,1 ,100]));
 
-// INSERTION SORT (ELEMENTY SORTING BASIC) O(N)
+// INSERTION SORT (ELEMENTY SORTING BASIC) O(N^2)
 // FAST WHEN THE LIST IS ALMOST SORTED
 // SHIFT INDEXES AND INSERT IN RESPECTIVE PLACES
 
@@ -158,3 +158,9 @@ function pivot(arr){
 // 	- fastest
 // 	- decent on menory
 // 	- one down size is worst case
+
+
+
+
+// Non-comparison sorting, dont compare every element to every other element
+// radix and counting sort only work with fixed length integers within a certain range
