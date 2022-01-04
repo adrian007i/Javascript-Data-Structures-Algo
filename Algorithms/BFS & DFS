@@ -1,0 +1,22 @@
+BFS
+    - good to find the shortest path
+    - memory intensive
+    - BFS checks all connected nodes before moving on to the next nodes
+
+DFS
+    - good to check if a path exist
+    - deep graph can be slow
+    - less memory
+    - DFS goes deep and back tracks when the destination node isnt found
+
+
+SHORTEST PATHS ALGOS FOR WEIGHTED GRAPHS
+
+BELMANS-FORD
+    - Works with negative weights
+    - can be slow
+    - worst case o(N^2)
+
+DIJKSTRA
+    - faster than BELMANS
+    - cannot work with negatives
