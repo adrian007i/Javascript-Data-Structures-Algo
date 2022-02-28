@@ -3,22 +3,22 @@
  * @param {number[]} prices
  * @return {number}
  */
- var maxProfit = function(prices) { 
-
-    let buying_price = prices[0] ;
+ var maxProfit = function(prices) {  
+     
+    if (prices.length === 1)
+        return 0;
+     
+    let left  = 0; 
     let profit = 0;
-    
-    
-    for (let i = 1; i < (prices.length -1); i++) {
-
-        if(prices[i] < buying_price)
-            buying_price = prices[i];
-        else
-            profit = (profit > prices[i] - buying_price ? profit : prices[i] - buying_price )
-        } 
-
-    return profit
+     
+    for (let right = 1; right < prices.length; right++) {
+        
+        if(prices[right] - prices[left] > profit) profit = prices[right] - prices[left];
+        if(prices[right] < prices[left]) left = right; 
+    }
+     return profit;
 };
+      
 
 console.log(maxProfit([1,2]));
  
