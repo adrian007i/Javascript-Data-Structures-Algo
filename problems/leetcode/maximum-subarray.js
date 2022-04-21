@@ -1,3 +1,4 @@
+https://leetcode.com/problems/maximum-subarray/
 var maxSubArray = function(nums) {
     
     let max = nums[0];
@@ -11,10 +12,7 @@ var maxSubArray = function(nums) {
         else sum = nums[i];
 
         if(sum > max) max = sum;  
-
-        console.log(sum);
-    }
-
+    } 
     return max; 
 };
 
